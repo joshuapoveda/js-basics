@@ -626,7 +626,7 @@ console.log(bulbasaur.abilities[0].ability)
 // Print cut
 console.log(bulbasaur.moves[2])
 
-// Print Bulbahhhh!!!!!
+// Print Bulbahhhh!!!!!//
 bulbasaur.sound() 
 
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
