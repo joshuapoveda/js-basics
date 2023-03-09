@@ -39,7 +39,7 @@
 // for (let i = 1; i <= 20; i++) {
 //   if (i === 1) {
 //     console.log(i + "Not Prime" + " and Odd");
-//   } else if (i === 2) {
+//   } else if (i =got== 2) {
 //     console.log(i + " Prime" + " and Even");
 //   } else if (i === 3) {
 //     console.log(i + " Prime" + " and Odd");
@@ -134,22 +134,7 @@
 // }
 
 // console.log(quartersBack(2,20))
-///////**************************
-// Nando went to Uniqlo and bought himself a nice plaid shirt for $27.83.
-// He paid with $100 as he had no change. The cashier paid returned his change
-// in large denominations since they needed change for the other customers.
 
-// Write a loop that prints out how many bills he received in return in as
-//  large denominations as possible.
-///////**************************
-// let moneyBack = function(cost,payment){
-//     let change = payment - cost
-//     console.log(change)
-//     let denomSin = 1.00
-//     let denomTen = 10.00
-//     let denomTwen = 20.00
-//     let denomFif = 50.00
-//     let denomHun = 100.00
 ///////**************************
 // for(let i=0;i < 100; i++){
 //   if(i % 3==0){
@@ -161,26 +146,23 @@
 //   }
 // }
 ///////**************************
-
-const car = {
-    color: 'blue',  
-    hp: 4000,
-    year: 1989
-}
-car.wheels = 'chrome'
-car.hp = 5000
-//All keys are strings
-// car is an object because it is a thing that requires a collection of variables to describe it
-//bracket notation works to search for items
-console.log(car)
-
-
-
-
+// const car = {
+//     color: 'blue',  
+//     hp: 4000,
+//     year: 1989
+// }
+// car.wheels = 'chrome'
+// car.hp = 5000
+// //All keys are strings
+// // car is an object because it is a thing that requires a collection of variables to describe it
+// //bracket notation works to search for items
+// console.log(car)
+///////**************************
 // function computerArea(width, height) {
 //   return `The area of a rectangle with a width of 
 //   ${width} and a height of ${height} is ${width * height}.`;
 // }
+///////**************************
 
 // console.log(computerArea(6, 4));
 
@@ -189,3 +171,32 @@ console.log(car)
 // };
 
 // console.log(planetHasWater("earth"));
+///////**************************
+// Bonus Logical Question
+// Let’s take the cookie quarter challenge and extend it to all possibilities.
+
+// What if the cookie cost $2 and I paid with a 20?
+
+// hint: incorporate parameters
+
+// Bonus Logical Question
+// Nando went to Uniqlo and bought himself a nice plaid shirt for $27.83. He paid with $100 as he had no change. The cashier paid returned his change in large denominations since they needed change for the other customers.
+
+// Write a loop that prints out how many bills he received in return in as large denominations as possible.
+///////**************************
+
+//Function declaration --> Are able to be hoised
+function dummyFunc() {
+    
+}
+//Function expression
+let dummyFunc2 = function () {
+    
+}
+
+//arrow func --> implicit return of a single expression, behaves oddly with the this. keyword
+const dummyfunc3 = () => { }
+
+//Terms: call, invoke, execute, and run a function
+//parameters become local variables within the function
+
