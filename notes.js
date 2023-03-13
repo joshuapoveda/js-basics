@@ -186,17 +186,246 @@
 ///////**************************
 
 //Function declaration --> Are able to be hoised
-function dummyFunc() {
+// function dummyFunc() {
     
-}
-//Function expression
-let dummyFunc2 = function () {
-    
-}
+//}
+// //Function expression
+// let dummyFunc2 = function () {    
+// }
 
 //arrow func --> implicit return of a single expression, behaves oddly with the this. keyword
-const dummyfunc3 = () => { }
+//const dummyfunc3 = () => { }
 
 //Terms: call, invoke, execute, and run a function
 //parameters become local variables within the function
+///////**************************
+//dummyarray = [1,'one']
+//the following is an example of using a rest parameter which produces an array
+// //and can take in multiple arguments
+// function getObject(name, ...dummyarray) {
+//   return {
+//     Name: name,
+//     array: dummyarray
+//   }
+
+// }
+
+// console.log(getObject('Fanny', dummyarray, '3', true))
+///////**************************
+// //the arguments object allows us to search and retrieve any arguments passed to the function by index
+
+// function getObject2(stringSet) {
+//     return arguments[0]
+// }
+
+// console.log(getObject2('jump','around','and','get','down'))
+///////**************************
+
+// const defaultExample = (item, price, tax = 60) => {
+//     return item + ' ' + ' ' + price + ' ' + tax
+    
+// }
+
+// console.log(defaultExample('spoon',3,))
+///////**************************
+//Example of Anonymous function being fed into a forEach function
+// var a = ["red", "green", "blue"];
+
+// a.forEach(function (color) {
+//   console.log(color);
+// });
+///////**************************
+
+// A recursive function typically has three parts
+
+// the base case: when the process can stop
+// the action: what to do (the meat and potatoes)
+// the recursive call: Invoking itself, but in such a way that we get closer to the base case
+
+//call stack example
+// function factorial(n) {
+//   if (n <= 0) return 1;
+//   //console.log(`Will return ${n} * factorial(${n - 1})`);
+//   return n * factorial(n - 1);
+// } 
+
+// console.log(factorial(4))
+///////**************************
+
+//????
+// let memo = {};
+// function fibMemo(n) {
+//   if (n <= 1) return n;
+//   if (memo[n]) return memo[n];
+//   console.log(`I have to add ${n} to the stack`);
+//   let result = fibMemo(n - 1) + fibMemo(n - 2);
+//   memo[n] = result;
+//   return result;
+// }
+
+// fibMemo(24)
+///////**************************
+
+
+// class Vehicle {
+//   constructor(vin, make,model) {
+//       this.vin = vin;
+//       this.make = make;
+//       this.model = model;
+//     // return is not needed
+//     // because the new object is returned by default
+//   }
+// }
+
+// const plane = new Vehicle("X123Y", "Boeing", '757')
+
+// console.log(plane)
+
+///////**************************
+
+// const adventurer = {
+//   name: "Timothy",
+//   hitpoints: 10,
+//   belongings: ["sword", "potion", "Tums"],
+//   companion: {
+//     name: "Velma",
+//     type: "Bat",
+//     companion: {
+//       name: "Tim",
+//       type: "Parasite",
+//       belongings: ["SCUBA tank", "Rogan josh", "health insurance"]
+//     },
+//   },
+// };
+
+// for (let i = 0; i < adventurer.belongings.length; i++) {
+//   console.log(adventurer.belongings[i]);
+// }
+// console.log(adventurer.companion.name)
+// console.log(adventurer.companion.companion.belongings[0])
+// ///////**************************
+
+// const movies = [
+//   { title: "Tokyo Story" },
+//   { title: "Paul Blart: Mall Cop" },
+//   { title: "L'Avventura" },
+// ];
+
+// console.log(movies[0].title)
+
+// for (let i = 0; i < movies.length; i++) {
+//   console.log(movies[i].title);
+// }
+
+// ///////**************************
+
+// class Foo {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   getNameSeparator() {
+//     return '-';
+//   }
+// }
+
+// class FooBar extends Foo {
+//   constructor(name, index) {
+//     super(name);
+//     this.index = index;
+//   }
+
+//   getFullName() {
+//     return this.name + super.getNameSeparator() + this.index;
+//   }
+// }
+
+// const firstFooBar = new FooBar('foo', 1);
+
+// console.log(firstFooBar.name);
+// // Expected output: "foo"
+
+// console.log(firstFooBar.getFullName());
+// // Expected output: "foo-1"
+
+///////**************************
+
+//FACTORY
+
+// //object of Car
+// class Car {
+//   constructor(maker, serialNumber,colors) {
+//     this.serialNumber = serialNumber;
+//       this.maker = maker;
+//       this.colors = colors
+//   }
+//   drive() {
+//     console.log("Vroom Vroom");
+//   }
+// }
+// //on instance of a an object (newCar)
+// const newCar = new Car("Mazda", 12345);
+// //console.log(newCar);
+
+// //A factory that creates Car objects for us
+// class Factory {
+//   constructor(company) {
+//     this.company = company;
+//     this.cars = [];
+//   }
+//     //this method uses the Car class to make the object while pushing it to an array
+//     //What we get is an array of objects, each one the result of call the generateCar()
+//     //method.
+//   generateCar() {
+//     const newCar = new Car(this.company, this.cars.length);
+//     this.cars.push(newCar);
+//   }
+//     //This finds a specific object in our array of objects
+//   findCar(index) {
+//     return this.cars[index];
+//   }
+// }
+// const tesla = new Factory("Tesla");
+
+// tesla.generateCar();
+// tesla.generateCar();
+// tesla.generateCar();
+// tesla.generateCar();
+// tesla.generateCar();
+
+// console.log(tesla);
+// console.log(tesla.findCar(0));
+
+// const porche = new Factory("Porche");
+// porche.generateCar();
+// porche.generateCar();
+// console.log(porche);
+// console.log(porche.findCar(0));
+///////**************************
+// class colorPicker {
+//   static colors() {
+//     return ["blue", "green", "brown"];
+//   }
+//     static test() {
+//       return "HELLO WORLD IN RED"
+//   }
+//   // rest of class definition here...
+// }
+// console.log(colorPicker.test())
+
+// more code...
+// const whip = new Car(
+//   "Honda",
+//   30,
+//   colorPicker.colors()[2]
+// )
+
+// const test = new Foo('Me')
+// console.log(test)
+// test.name = colorPicker.colors()
+// console.log(test)
+
+// console.log(whip)
+///////**************************
+
 
